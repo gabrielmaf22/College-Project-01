@@ -1,14 +1,11 @@
 const express = require('express');
+const indexRoute = require('./routes/indexRoutes');
 const port = 3000;
-
-const alunoRoute = require('./routes/alunoRoute');
-const professorRoute = require('./routes/professorRoute');
 
 const app = express();
 
 // Use Routes
-app.use('/aluno', alunoRoute);
-app.use('/professor', professorRoute);
+app.use('/', indexRoute);
 
 // Configure Server
 app.listen(port, () => {
